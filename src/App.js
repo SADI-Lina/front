@@ -7,7 +7,6 @@ import HeroPage from './Pages/HeroPage';
 import UserPage from './Pages/UserPage';
 import AdminPage from './Pages/AdminPage';
 function App() {
-
   
 
   return (

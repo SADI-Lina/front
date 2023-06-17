@@ -51,7 +51,7 @@ const Login =() => {
           nom : '',
           prenom : '',
           email : '',
-          id : 0
+          id :0
         });
   
         console.log(response.data); // Handle the response from the server

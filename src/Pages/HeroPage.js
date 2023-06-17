@@ -7,14 +7,13 @@ import NavBar from '../components/NavBar'
 import AjouterLieu from "../components/AjouterLieu";
 import AdminHome from "../components/AdminHome";
 import Description from "../components/Description";
-import AdminLieux from "../components/AdminLieux";
 class HeroPage extends Component 
 {
     state={}
     render(){
         return (
             <div>
-                
+                <NavBar></NavBar>
                 <Routes>
                     <Route
                         path="/"
@@ -53,14 +52,6 @@ class HeroPage extends Component
                         element = {
                             <div>
                                 <Description></Description>
-                            </div>
-                        }
-                    ></Route>
-                     <Route
-                        path="/AdminLieux"
-                        element = {
-                            <div>
-                                <AdminLieux></AdminLieux>
                             </div>
                         }
                     ></Route>

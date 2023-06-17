@@ -1,15 +1,58 @@
-import React, {useState} from 'react';
+import React, {useState , useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faStar} from '@fortawesome/free-solid-svg-icons';
 import FeedBackPopUp from './FeedBackPopUp';
+import axios from 'axios';
 const Review = () => {
-    const[isPopupVisible, setPopupVisible] = useState(false);
-    const showPopup = () => {
-        setPopupVisible(true);
+
+  const[isPopupVisible, setPopupVisible] = useState(false);
+  const [commentaire, setCommentaire] = useState([]);
+  const [point, setPoint] = useState(null);
+
+  const showPopup = () => {
+    setPopupVisible(true);
+};
+const hidePopup = () => {
+  setPopupVisible(false);
+};
+
+  useEffect(() => {
+    const fetchCommentaires = async () => {
+      try {
+        const response = await axios.get(`http://127.0.0.1:8080/point_d_interet/1/commentaire`);
+        const comm = response.data;
+        console.log(comm);
+        setCommentaire(comm);
+      } catch (error) {
+        console.error('Error fetching commentaires:', error);
+      }
     };
-    const hidePopup = () => {
-      setPopupVisible(false);
-  };
+  
+    fetchCommentaires();
+  }, []);
+
+  useEffect(() => {
+    const fetchPointOfInterest = async () => {
+      try {
+        const response = await axios.get(`http://127.0.0.1:8080/points_d_interet/1`);
+        setPoint(response.data);
+        console.log(point);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchPointOfInterest();
+  }, []);
+
+  if (!point) {
+    return <div>Loading...</div>;
+  }
+
+
+
+
+   
     return (
              <div className={`isPopupVisible ${isPopupVisible ? "ml-16 mr-16 p-4 mt-8 bg-opacity-10 border border-gray-300 rounded-xl bg-white" : "ml-16 mr-16 p-4 mt-8  border border-gray-300 rounded-xl bg-white" }`}>
 
