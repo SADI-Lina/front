@@ -2,7 +2,7 @@ import React from 'react'
 import SearchBar from './SearchBar'
 import bgImg from '../assets/bgPic.png'
 import FeedBackPopUp from './FeedBackPopUp'
-import Card from './Card' ; 
+import Card from './Card' ;
 import pic from "../assets/La casbah.png"
 import EventCard from './EventCard';
 import Footer from './Footer';
@@ -45,7 +45,7 @@ const UserHomePage = () => {
       content:
         "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable content",
     },
-   
+
   ];
   const hotels = [
     {
@@ -105,7 +105,7 @@ const UserHomePage = () => {
       content:
         "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable content",
     },
-   
+
   ];
   const restaurants = [
     {
@@ -165,7 +165,7 @@ const UserHomePage = () => {
       content:
         "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable content",
     },
-   
+
   ];
   const shoppings = [
     {
@@ -225,7 +225,7 @@ const UserHomePage = () => {
       content:
         "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable content",
     },
-   
+
   ];
 
   return (
@@ -235,7 +235,7 @@ const UserHomePage = () => {
                 <div class="">
                    <h1 class="mx-auto mt-[30%] md:mt-[13%] text-[30px] md:text-[40px] text-white font-[700] w-[80%] text-center">Bienvenus dans une unique expérience</h1>
                 </div>
-            
+
         </div>
         <div class="md:mt-[-7%] mt-[-15%] mb-[100px]">
           <SearchBar></SearchBar>
@@ -243,7 +243,7 @@ const UserHomePage = () => {
         <div>
         <div className="grid  place-items-cente py-5  ">
         <h1 className="mb-3 block text-[26px] font-[600] px-6 ">
-                Les évènements à venir </h1>        
+                Les évènements à venir </h1>
                  <div className="grid xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 py-4 px-2 px-1 justify-center items-center  ">
           {events.slice(0,4).map((items, key) => (
             <EventCard
@@ -258,7 +258,7 @@ const UserHomePage = () => {
       </div>
       <div className="grid place-items-cente bg-[#F3F7FF] py-5   ">
         <h1 className="mb-3 block text-[26px] font-[600] px-6 ">
-                Les meilleurs hôtels à côté de vous </h1>        
+                Les meilleurs hôtels à côté de vous </h1>
                  <div className="grid xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 py-4 px-2 px-1 justify-center items-center  ">
           {hotels.slice(0,8).map((items, key) => (
             <Card
@@ -273,7 +273,7 @@ const UserHomePage = () => {
       </div>
       <div className="grid place-items-cente py-5   ">
         <h1 className="mb-3 block text-[26px] font-[600] px-6 ">
-                Les meilleurs restaurants à côté de vous </h1>        
+                Les meilleurs restaurants à côté de vous </h1>
                  <div className="grid xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 py-4 px-2 px-1 justify-center items-center  ">
           {restaurants.slice(0,8).map((items, key) => (
             <Card
@@ -288,7 +288,7 @@ const UserHomePage = () => {
       </div>
       <div className="grid place-items-cente bg-[#F3F7FF] py-5   ">
         <h1 className="mb-3 block text-[26px] font-[600] px-6 ">
-                Les meilleurs centres commerciaux à côté de vous </h1>        
+                Les meilleurs centres commerciaux à côté de vous </h1>
                  <div className="grid xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 py-4 px-2 px-1 justify-center items-center  ">
           {shoppings.slice(0,8).map((items, key) => (
             <Card
@@ -301,11 +301,11 @@ const UserHomePage = () => {
           ))}
         </div>
       </div>
-      
+
     </div>
     </div>
     <Footer/>
-   </> 
+   </>
   )
 }
 

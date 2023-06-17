@@ -6,7 +6,7 @@ const CardsLieux = () => {
 
   useEffect(() => {
     // Fetch the data from the API endpoint
-    fetch('http://127.0.0.1:8080/api/statistics/most_visited')
+    fetch('http://127.0.0.1:5000/api/statistics/most_visited')
       .then((response) => response.json())
       .then((data) => setPoints(data))
       .catch((error) => console.log(error));
